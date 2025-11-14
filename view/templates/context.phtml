@@ -1,0 +1,84 @@
+<?php
+/**
+ * Template for AI Context generation
+ * @var \Fruitcake\AiGuidelines\Model\ContextDataProvider $context
+ */
+?>
+<magento-ai-guidelines>
+<!-- Auto-generated content - DO NOT EDIT between these tags -->
+<!-- Last updated: <?= $context->getGeneratedDate() ?> -->
+<!-- Run 'bin/magento fruitcake:ai:generate-context' to regenerate -->
+
+# Magento AI Guidelines
+
+These guidelines are intended to help you write code that is more maintainable and easier to extend and should be followed when developing for this project.
+
+## Application Context
+This is a Magento 2 application using the versions below. Ensure that you are using code appropriate for these versions.
+
+- **Magento**: <?= $context->getMagentoVersion() ?> (<?= $context->getMagentoEdition() ?>)
+- **PHP**: <?= $context->getPhpVersion() ?>
+<?php if ($context->isHyvaInstalled()): ?>
+- **Theme**: Hyva <?= $context->getHyvaVersion() ?> (Alpine.js + Tailwind CSS)
+<?php endif; ?>
+
+## Key Installed Modules
+
+<?php $customModules = $context->getCustomModules(); ?>
+<?php if (count($customModules) > 0): ?>
+### Custom Modules
+    <?php foreach ($customModules as $module): ?>
+- `<?= $module ?>`
+    <?php endforeach; ?>
+
+<?php endif; ?>
+<?php $thirdPartyModules = $context->getThirdPartyModulesLimited(); ?>
+<?php if (count($thirdPartyModules) > 0): ?>
+### Third-Party Modules
+    <?php foreach ($thirdPartyModules as $module): ?>
+- `<?= $module ?>`
+    <?php endforeach; ?>
+    <?php $remaining = $context->getRemainingThirdPartyModulesCount(); ?>
+    <?php if ($remaining > 0): ?>
+
+*...and <?= $remaining ?> more third-party modules*
+    <?php endif; ?>
+
+<?php endif; ?>
+
+## Project Structure Notes
+
+- **Root Directory**: `<?= $context->getRootDirectory() ?>`
+- **App Directory**: `<?= $context->getAppDirectory() ?>`
+- **Custom Modules**: Located in `app/code/`
+- **Theme Files**: Located in `app/design/`
+
+## Context for Claude
+
+### Magento 2 Best Practices
+- Use dependency injection (DI) via `di.xml`
+- Follow PSR-12 coding standards
+- Use repositories for data access
+- Prefer plugins over rewrites
+- Use declarative schema for database changes
+
+<?php if ($context->isHyvaInstalled()): ?>
+### Hyva-Specific Notes
+- Uses Alpine.js for interactivity
+- Uses Tailwind CSS for styling
+- Check `Hyva_Theme` compatibility for customizations
+- ViewModels are preferred over block classes
+
+<?php endif; ?>
+### Common File Locations
+- **Controllers**: `Controller/[Adminhtml/]Action.php`
+- **Blocks**: `Block/`
+- **Models**: `Model/`
+- **Templates**: `view/[frontend|adminhtml]/templates/`
+- **Layout XML**: `view/[frontend|adminhtml]/layout/`
+- **UI Components**: `view/[frontend|adminhtml]/ui_component/`
+- **Web Assets**: `view/[frontend|adminhtml]/web/`
+
+---
+
+</magento-ai-guidelines>
