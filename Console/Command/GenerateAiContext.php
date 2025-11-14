@@ -21,7 +21,7 @@ class GenerateAiContext extends Command
         private readonly DirectoryList $directoryList,
         private readonly ContextDataProvider $contextData,
         private readonly ModuleDirReader $moduleDirReader,
-        string $name = null
+        ?string $name = null
     ) {
         parent::__construct($name);
     }
