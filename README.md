@@ -27,4 +27,6 @@ Then regenerate:
 bin/magento ai:generate-context
 ```
 
-## Ifeas
+## Ideas
+ - Add docs based on installed packages/versions
+ - Add skills
