@@ -22,7 +22,7 @@ class GenerateAiContext extends Command
 
     /**
      * Inject dependencies on demand to avoid loading for every command
-     * 
+     *
      * @return void
      */
     public function inject()
