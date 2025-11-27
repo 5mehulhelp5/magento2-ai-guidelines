@@ -20,7 +20,10 @@
   "autoload": {
     "psr-4": {
       "Fruitcake\\AiGuidelines\\": "src/"
-    }
+    },
+    "files": [
+      "src/registration.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
@@ -40,5 +43,10 @@
   },
   "config": {
     "sort-packages": true
+  },
+  "exta": {
+    "branch-alias": {
+      "dev-master": "0.1-dev"
+    }
   }
 }
