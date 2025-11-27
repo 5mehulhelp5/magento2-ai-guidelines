@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fruitcake\AiFiles\src\Service;
+namespace Fruitcake\AiGuidelines\Service;
 
 use Fruitcake\AiGuidelines\Model\ContextDataProvider;
 use Magento\Framework\Filesystem\DirectoryList;
