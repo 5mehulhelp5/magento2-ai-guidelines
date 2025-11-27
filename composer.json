@@ -20,11 +20,11 @@
   "autoload": {
     "psr-4": {
       "Fruitcake\\AiGuidelines\\": "src/"
-    },
-    "autoload-dev": {
-      "psr-4": {
-        "Fruitcake\\AiGuidelines\\Test": "tests/"
-      }
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Fruitcake\\AiGuidelines\\Test": "tests/"
     }
   },
   "require": {
