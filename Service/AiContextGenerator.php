@@ -12,8 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class AiContextGenerator
 {
-    private const string OUTPUT_FILE = 'CLAUDE.md';
-    private const string TEMPLATE_FILE = 'context.phtml';
+    private const OUTPUT_FILE = 'CLAUDE.md';
+    private const TEMPLATE_FILE = 'context.phtml';
 
     public function __construct(
         private readonly DirectoryList $directoryList,
